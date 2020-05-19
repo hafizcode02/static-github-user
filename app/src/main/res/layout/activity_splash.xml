@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/LogoID"
+        android:layout_width="110dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="490dp"
+        android:contentDescription="@string/github_icon"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526"
+        app:srcCompat="@drawable/icongithub" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="153dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="384dp"
+        android:gravity="center"
+        android:text="@string/github_user"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogoID"
+        app:layout_constraintVertical_bias="0.133" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
