@@ -5,6 +5,7 @@
     <string name="repo">100 Repository</string>
     <string name="gitusername">"@githubuser"</string>
     <string name="followw">1000 following 1000 followers</string>
+    <string name="github_names">Github Names</string>
 
     <!-- Other string resources-->
 

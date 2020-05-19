@@ -1,10 +1,12 @@
 package com.hafizcode.githubuser
 
+import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,8 +38,20 @@ class MainActivity : AppCompatActivity() {
 
         listViewItemGitUser.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
-                Toast.makeText(this@MainActivity, gitusers[position].Name, Toast.LENGTH_SHORT)
-                    .show()
+                val moveGitUser = GitUser(
+                    gitusers[position].Username,
+                    gitusers[position].Name,
+                    gitusers[position].Avatar,
+                    gitusers[position].Company,
+                    gitusers[position].Location,
+                    gitusers[position].Repository,
+                    gitusers[position].Follower,
+                    gitusers[position].Following
+                )
+
+                val moveIntentToDetail = Intent(this@MainActivity, GitDetailActivity::class.java)
+                moveIntentToDetail.putExtra(GitDetailActivity.DETAIL_USER, moveGitUser)
+                startActivity(moveIntentToDetail)
             }
     }
 
